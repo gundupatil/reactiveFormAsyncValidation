@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataShareService } from './dataService.sevice';
+import { CustomValidator } from './validatecustom';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule ,ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataShareService, CustomValidator],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
